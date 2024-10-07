@@ -11,6 +11,9 @@ public class PlayerHealthScripts : MonoBehaviour
     int currentHealth;
     public HealthBarScripts healthBar;
 
+
+
+
     public UnityEvent onDeath;
 
     // Start is called before the first frame update
@@ -26,8 +29,9 @@ public class PlayerHealthScripts : MonoBehaviour
     public void takeDamage(int damage){
         currentHealth -= damage;
         healthBar.updateBar(currentHealth, maxHealth);
-        if(currentHealth <= 0){
+        if (currentHealth <= 0){
             onDeath.Invoke();
+            healthBar.valueText.text = "";
         }
     }
 
@@ -38,8 +42,8 @@ public class PlayerHealthScripts : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.D)){
+        /*if(Input.GetKeyDown(KeyCode.D)){
             takeDamage(30);
-        }
+        }*/
     }
 }

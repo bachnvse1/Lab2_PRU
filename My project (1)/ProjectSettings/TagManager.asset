@@ -11,6 +11,7 @@ TagManager:
   - TopEnemy
   - nen_dat
   - Knight_1
+  - Enemy_2
   layers:
   - Default
   - TransparentFX
