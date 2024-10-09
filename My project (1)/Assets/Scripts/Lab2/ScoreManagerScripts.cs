@@ -10,6 +10,7 @@ public class ScoreManagerScripts : MonoBehaviour
     public static ScoreManagerScripts instance;
 
     private int score;
+    [SerializeField]
     public TextMeshProUGUI scoreText; // Kết nối với UI để hiển thị điểm số
 
     void Awake()

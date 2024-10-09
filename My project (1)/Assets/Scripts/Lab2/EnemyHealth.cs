@@ -18,8 +18,7 @@ public class EnemyHealth : MonoBehaviour
     public int score = 5;       // Điểm số khi tiêu diệt quái
     [SerializeField]
     public TextMeshProUGUI valueText;
-    int currentHealth;
-    ScoreManagerScripts ScoreManager;
+    public int currentHealth;
 
     // Start is called before the first frame update
     void Start()
@@ -32,31 +31,10 @@ public class EnemyHealth : MonoBehaviour
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
-
-        // Kiểm tra nếu máu <= 0 thì quái chết
+        valueText.text = "HP Enemy_" + enemy + ": " + currentHealth.ToString() + " / " + maxHealth.ToString();
         if (currentHealth <= 0)
         {
-            Die();
+            valueText.text = "HP Enemy_" + enemy + ": " + 0 + " / " + maxHealth.ToString();
         }
-    }
-
-    // Hàm xử lý khi quái chết
-    void Die()
-    {
-        // Xử lý việc cộng điểm
-        AddScore(score); // Gọi hàm để cộng điểm
-
-        // Xoá hoặc vô hiệu hóa quái
-        Destroy(gameObject);
-
-        // Optional: Log for debugging
-        Debug.Log(gameObject.name + " was destroyed and gave " + score + " points.");
-    }
-
-    // Hàm cộng điểm, có thể thay đổi tùy vào hệ thống điểm số của bạn
-    void AddScore(int points)
-    {
-        // Ở đây bạn có thể gọi tới hệ thống điểm số toàn cục, ví dụ:
-        ScoreManager.AddPoints(points); // Giả sử bạn có một ScoreManager để quản lý điểm
     }
 }

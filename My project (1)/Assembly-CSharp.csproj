@@ -60,19 +60,20 @@
     <Analyzer Include="E:\2022.3.45f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Scripts\EnemyScripts.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\BackgroundControl_0.cs" />
-    <Compile Include="Assets\Scripts\newEnemyMovementScripts.cs" />
+    <Compile Include="Assets\Scripts\Lab2\Player_2Movement.cs" />
+    <Compile Include="Assets\Scripts\Lab2\ColisionScripts.cs" />
+    <Compile Include="Assets\Scripts\Lab2\newEnemyMovementScripts.cs" />
     <Compile Include="Assets\Scripts\MoveScripts.cs" />
     <Compile Include="Assets\Scripts\Lab2\HealthBarScripts.cs" />
     <Compile Include="Assets\Scripts\Lab2\EnemyHealth.cs" />
     <Compile Include="Assets\Scripts\Lab2\ScoreManagerScripts.cs" />
+    <Compile Include="Assets\Scripts\Lab2\RestartScripts.cs" />
     <Compile Include="Assets\Scripts\EnemyCollisionHandlerScripts.cs" />
     <Compile Include="Assets\Scripts\MovementScripts.cs" />
-    <Compile Include="Assets\Scripts\Player_2Movement.cs" />
     <Compile Include="Assets\Free 2D Cartoon Parallax Background\Demo\Script\ParallaxBackground_0.cs" />
     <Compile Include="Assets\Scripts\Lab2\Backgound.cs" />
-    <Compile Include="Assets\Scripts\ColisionScripts.cs" />
+    <Compile Include="Assets\Scripts\Lab2\EnemyScripts.cs" />
     <Compile Include="Assets\Scripts\Lab2\PlayerHealthScripts.cs" />
   </ItemGroup>
   <ItemGroup>
